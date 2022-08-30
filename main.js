@@ -13,8 +13,9 @@ function createWindow () {
     }
   })
 
+  console.log("args", process.argv);
   // and load the index.html of the app.
-  mainWindow.loadURL('http://localhost:1880/wall/');
+  mainWindow.loadURL(process.env.WALL_URL || 'http://localhost:1880/wall/');
   //mainWindow.loadURL('https://near.services');
 
   // Open the DevTools.
